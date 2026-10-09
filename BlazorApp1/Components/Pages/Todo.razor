@@ -1,5 +1,5 @@
 @page "/todo"
-// This is a Blazor directive that configures a component to use interactive server-side rendering
+@* This is a Blazor directive that configures a component to use interactive server-side rendering *@
 @rendermode InteractiveServer
 
 <h3>Todo (@todos.Count(todo => !todo.IsDone))</h3>
@@ -10,6 +10,7 @@
         <li>
             <input type="checkbox" @bind="todo.IsDone" />
             <input @bind="todo.Title" />
+            <button @onclick="() => todos.Remove(todo)">Remove</button>
         </li>
     }
 </ul>
@@ -29,4 +30,8 @@
             newTodo = string.Empty;
         }
     }
+    void RemoveTodo(TodoItem todo)
+    {
+        todos.Remove(todo);
+    }   
 }
