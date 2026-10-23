@@ -1,10 +1,68 @@
 ﻿@page "/pizza"
-<h3>Pizza</h3>
+@using BlazingPizza
+@using BlazorApp.Data
+@inject PizzaService PizzaSvc
 
-<p>@welcomeMessage</p>
+
+<h3>Blazor Pizzas</h3>
+<h1>Choose your pizza</h1>
+
+<p>We have all these delicious recipes:</p>
+@if (todaysPizzas == null)
+{
+    <p>We're finding out what pizzas are available today...</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Pizza Name</th>
+                <th>Description</th>
+                <th>Vegetarian?</th>
+                <th>Vegan?</th>
+                <th>Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var pizza in todaysPizzas)
+            {
+                <tr>
+                    <td>@pizza.Name</td>
+                    <td>@pizza.Description</td>
+                    <td>@pizza.Vegetarian</td>
+                    <td>@pizza.Vegan</td>
+                    <td>@pizza.Price</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+
+<ul class="pizza-cards">
+    @if (specials != null)
+    {
+        @foreach (var special in specials)
+        {
+            <li style="background-image: url('@special.ImageUrl')">
+                <div class="pizza-info">
+                    <span class="title">@special.Name</span>
+                    @special.Description
+                    <span class="price">@special.GetFormattedBasePrice()</span>
+                </div>
+            </li>
+        }
+    }
+</ul>
 
 
 
 @code {
     private string welcomeMessage = "However you like your pizzas, we can deliver the fast!";
+
+    List<PizzaSpecial> specials = new();
+    private List<PizzaSpecial> todaysPizzas;
+
+    protected override async Task OnInitializedAsync() => todaysPizzas = await PizzaSvc.GetPizzasAsync();
 }
