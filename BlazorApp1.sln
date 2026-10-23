@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.0.31903.59
+# Visual Studio Version 18
+VisualStudioVersion = 18.10.12224.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApp1", "BlazorApp1\BlazorApp1.csproj", "{1D5FF0D4-85A7-4E0B-A9B3-83616900C4C6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "..\C Stuff\ConsoleApp1\ConsoleApp1.csproj", "{40C41250-CBA0-4997-B68C-2A70BC79385B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,18 +27,6 @@ Global
 		{1D5FF0D4-85A7-4E0B-A9B3-83616900C4C6}.Release|x64.Build.0 = Release|Any CPU
 		{1D5FF0D4-85A7-4E0B-A9B3-83616900C4C6}.Release|x86.ActiveCfg = Release|Any CPU
 		{1D5FF0D4-85A7-4E0B-A9B3-83616900C4C6}.Release|x86.Build.0 = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|x64.Build.0 = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Debug|x86.Build.0 = Debug|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|x64.ActiveCfg = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|x64.Build.0 = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|x86.ActiveCfg = Release|Any CPU
-		{40C41250-CBA0-4997-B68C-2A70BC79385B}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
